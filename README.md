@@ -62,9 +62,11 @@ Police have finite patrols and must decide where and when to deploy them. A raw 
 .
 ├── Crime_Prediction_Project.ipynb   # main notebook (EDA → features → models → evaluation → conclusion)
 ├── Video_Explanation_Script.md      # 16–18 min narration script for the submission video
+├── requirements.txt                 # pinned dependencies
+├── LICENSE                          # MIT
 ├── README.md                        # this file
 └── data/
-    └── Train.xlsx                    # dataset (not committed if large; see below)
+    └── Train.xlsx                    # place the dataset here (see data/README.md)
 ```
 
 ---
@@ -78,7 +80,10 @@ Police have finite patrols and must decide where and when to deploy them. A raw 
 
 **Locally**
 ```bash
-pip install pandas numpy scikit-learn xgboost statsmodels matplotlib seaborn pyxlsb openpyxl
+git clone https://github.com/harshr002/crime-incident-prediction.git
+cd crime-incident-prediction
+pip install -r requirements.txt
+# put Train.xlsx (or Train.xlsb) in the data/ folder, then:
 jupyter notebook Crime_Prediction_Project.ipynb
 ```
 
